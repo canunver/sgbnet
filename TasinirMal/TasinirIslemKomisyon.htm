@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Komisyon / İskonto Hesaplama</title>
+    <script language="javascript" type="text/javascript" src="../Script/jquery/jquery-latest.min.js?v=03022016"></script>
+    <script language="JavaScript" type="text/javascript" src="../script/paraFormat.js"></script>
+    <script language="JavaScript" type="text/javascript" src="ModulScripts/KomisyonHesapla.js?v=2"></script>
+</head>
+<body>
+    <form id="form1">
+        <div class="form">
+            <table style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:10pt;">
+                <tr>
+                    <td>
+                        <input type="radio" id="optSecim_0" name="optSecim" checked="checked" value="1" />Fiyatlara ekle (Komisyon,
+                        masraf, vb.)<br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" id="optSecim_1" name="optSecim" value="2" />Fiyatlardan çıkart (İskonto, vb.)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="chkKDV" name="chkKDV" value="1" />KDV'yi işleme dahil et
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Eklenecek/Düşülecek Rakam
+                        <input type="text" id="txtRakam" name="txtRakam" value="" size="10" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+        <center>
+            <input type="button" id="btnSakla" class="dugme" style="width: 120px" value="Hesapla ve Yaz"
+                   onclick="KomisyonYaz();" />
+            <input type="button" id="btnKapat" class="dugme" style="width: 120px" value="Kapat"
+                   onclick="javascript:parent.hidePopWin();" />
+        </center>
+    </form>
+</body>
+</html>
